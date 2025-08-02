@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style/styles.css">
+    <title>Kaio R. Silva | Analista de Sistemas</title>
+</head>
+
+<body>
+
+    <div class="particulas"></div>
+
+<!--NAVEGAÇÃO-->
+<nav class="navegacao">
+  <div class="nav-container">
+    <button class="hamburguer" onclick="toggleMenu()">☰</button>
+    <ul class="menu" id="menu">
+      <li><a href="#inicio" class="menu-link">Início</a></li>
+      <li><a href="#sobre" class="menu-link">Sobre</a></li>
+      <li><a href="#projetos" class="menu-link">Projetos</a></li>
+      <li><a href="#contatos" class="menu-link">Contatos</a></li>
+    </ul>
+  </div>
+</nav>
+
+    <!-- FIM DA NAVEGAÇÃO-->
+
+    <!--INICIO DA MAIN-->
+    <main id="inicio" class="cabecalho">
+        <img src="img/fotokaiorsilva.png" alt="Foto Kaio" class="foto-perfil">
+        <h1>Kaio Rodrigues</h1>
+        <p class="cabecalho-sub-titulo">Desenvolvedor Full Stack</p>
+    </main>
+
+<section id="sobre" class="sobre">
+  <h2 class="sobre-titulo">Sobre Mim</h2>
+  <div class="sobre-caixa">
+    <p class="sobre-paragrafo">
+      Meu nome é Kaio Rodrigues Silva, tenho 26 anos, natural de Minas Gerais. Formado em Análise e
+      Desenvolvimento de Sistemas pela UNOPAR, sou pós-graduado em Segurança Cibernética e Segurança de Dados
+      pela PUC Minas e estou cursando Engenharia de Redes e Telecomunicações no INATEL. Tenho certificações em
+      Ataques Cibernéticos, Cybersecurity (CompTIA), Google Cloud Developer e AWS Cloud. Minha paixão por segurança
+      cibernética e redes me impulsiona a buscar constantemente novos desafios e conhecimentos para proteger
+      sistemas e dados.
+    </p>
+  </div>
+</section>
+
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+
+
+            <div class="projetos-card">
+                <img src="img/projeto1.png" alt="Projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">WebSite - Restaurante digital</h3>
+                    <p class="paragrafo-projetos">landing Page com a funcionalidade de poder visualizar cardapio,
+                        Avaliações, e realizar pedido sem precisar sair de casa. </p>
+                </div>
+            </div>
+
+
+            <div class="projetos-card">
+                <img src="img/projeto2.png" alt="Projeto 2" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">Password Generator</h3>
+                    <p class="paragrafo-projetos">Este é um gerador de senha aleatória desenvolvido com HTML, CSS e
+                        JavaScript. Ele gera senhas seguras e aleatórias com base nos parâmetros fornecidos pelo
+                        usuário, como comprimento da senha e caracteres especiais.</p>
+                </div>
+            </div>
+
+        
+            <div class="projetos-card">
+                <img src="img/projeto3.png" alt="Projeto 3" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">Louvando - Cifra & transposição de Notas </h3>
+                    <p class="paragrafo-projetos">O sistema facilita o acesso ao hinário da Igreja Cristã Maranata, permitindo buscar hinos por título, letra ou tema. Cada hino exibe letra, cifra com transposição e anexos. Usuários autenticados podem criar listas personalizadas de hinos e sugerir novos.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="6" id="mensagem"></textarea>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar Mensagem</button>
+        </form>
+    </section>
+        <!--RODAPE-->
+        <footer class="footer">
+            <div class="container-icones">
+                <a href="https://www.instagram.com/kaiors_99/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <img src="img/icons/instagram.svg" alt="Instagram" class="icon-social" />
+                </a>
+                <a href="https://wa.me/5533998244199" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <img src="img/icons/whatsapp.svg" alt="WhatsApp" class="icon-social" />
+                </a>
+                <a href="https://github.com/analistakaio" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <img src="img/icons/github.svg" alt="GitHub" class="icon-social" />
+                </a>
+            </div>
+            <p class="footer-text">© 2025 Kaio Rodrigues Silva - Todos os direitos reservados</p>
+        </footer>
+        <!--FIM DO RODAPE-->
+        <script src="src/javascript/script.js"></script>
+</body>
+
+</html>
