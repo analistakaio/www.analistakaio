@@ -87,17 +87,22 @@
     </section>
     <section id="contatos" class="contatos">
         <h2 class="contatos-titulo">Entre em Contato</h2>
-        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+        <form class="formulario-contato" id="formulario" onsubmit="enviarEmail(event)">
 
             <div class="grupo-form">
-                <input placeholder="Nome" class="campo-form" id="nome">
+                <input type="text" placeholder="Digite Seu nome completo" required class="campo-form" id="nome">
+               
             </div>
 
             <div class="grupo-form">
-                <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="6" id="mensagem"></textarea>
+                 <input type="text" placeholder="(DDD) 99999-9999" required class="campo-form" id="telefone">
             </div>
 
-            <button type="submit" class="botao-form">Enviar Mensagem</button>
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua Mensagem" required rows="4" id="mensagem"></textarea>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar por E-mail</button>
         </form>
     </section>
         <!--RODAPE-->
@@ -111,6 +116,9 @@
                 </a>
                 <a href="https://github.com/analistakaio" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                     <img src="img/icons/github.svg" alt="GitHub" class="icon-social" />
+                </a>
+                <a href="https://www.linkedin.com/in/kaio-devsenior/" target="_blank" rel="noopener noreferrer" aria-label="linkedin">
+                    <img src="img/icons/linkedin.svg" alt="linkedin" class="icon-social" />
                 </a>
             </div>
             <p class="footer-text">© 2025 Kaio Rodrigues Silva - Todos os direitos reservados</p>

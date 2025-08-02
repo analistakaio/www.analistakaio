@@ -11,19 +11,36 @@ function toggleMenu() {
 // 🔼 FORMULÁRIO WHATSAPP
 // ==============================
 
-function enviarWhats(event) {
-    event.preventDefault();
+// Máscara simples de telefone (formato brasileiro)
+  document.getElementById('telefone').addEventListener('input', function (e) {
+    let valor = e.target.value.replace(/\D/g, '');
 
-    const nome = document.getElementById('nome').value;
-    const mensagem = document.getElementById('mensagem').value;
-    const telefone = '5533998244199';
+    if (valor.length > 11) valor = valor.slice(0, 11); // Máximo 11 dígitos
 
-    const texto = `Olá! Me chamo ${nome}, ${mensagem}`;
-    const msgFormatada = encodeURIComponent(texto);
+    let formatado = '';
 
-    const url = `https://whatsa.me/${telefone}/?t=${msgFormatada}`;
+    if (valor.length > 0) formatado += '(' + valor.substring(0, 2);
+    if (valor.length >= 3) formatado += ') ' + valor.substring(2, 7);
+    if (valor.length >= 8) formatado += '-' + valor.substring(7);
 
-    window.open(url, '_blank');
+    e.target.value = formatado;
+  });
+
+// Máscara simples de telefone (formato brasileiro)
+function enviarEmail(event) {
+  event.preventDefault();
+
+  const nome = document.getElementById('nome').value;
+  const telefone = document.getElementById('telefone').value;
+  const mensagem = document.getElementById('mensagem').value;
+  const emailDestino = 'contato@usestackforge.info'; // substitui pelo seu e-mail
+
+  const assunto = encodeURIComponent(`Contato de ${nome}`);
+  const corpo = encodeURIComponent(`Olá! Me chamo ${nome}\nTelefone: ${telefone}\n\n${mensagem}`);
+
+  const url = `mailto:${emailDestino}?subject=${assunto}&body=${corpo}`;
+
+  window.open(url, '_blank');
 }
 
 // FUNÇÃO PARA ESCODER O MENU AO ROLAR A PÁGINA

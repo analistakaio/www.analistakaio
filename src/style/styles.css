@@ -242,6 +242,8 @@ h1 {
     outline: none;
 }
 
+
+
 .campo-form:focus {
     border-color: var(--secundaria);
     box-shadow: 0 0 10px rgba(79, 70, 229, 0.3);
